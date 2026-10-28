@@ -1,0 +1,24 @@
+'use client';
+import { HugeiconsIcon } from '@hugeicons/react';
+import Search01Icon from '@hugeicons-pro/core-stroke-rounded/Search01Icon';
+import Calendar03Icon from '@hugeicons-pro/core-stroke-rounded/Calendar03Icon';
+import ArrowLeft01Icon from '@hugeicons-pro/core-stroke-rounded/ArrowLeft01Icon';
+import ArrowRight01Icon from '@hugeicons-pro/core-stroke-rounded/ArrowRight01Icon';
+import ArrowUpRight01Icon from '@hugeicons-pro/core-stroke-rounded/ArrowUpRight01Icon';
+import Bookmark02Icon from '@hugeicons-pro/core-stroke-rounded/Bookmark02Icon';
+import Share08Icon from '@hugeicons-pro/core-stroke-rounded/Share08Icon';
+import Home01Icon from '@hugeicons-pro/core-stroke-rounded/Home01Icon';
+import GridViewIcon from '@hugeicons-pro/core-stroke-rounded/GridViewIcon';
+import Settings01Icon from '@hugeicons-pro/core-stroke-rounded/Settings01Icon';
+import Cancel01Icon from '@hugeicons-pro/core-stroke-rounded/Cancel01Icon';
+import Tick02Icon from '@hugeicons-pro/core-stroke-rounded/Tick02Icon';
+import Add01Icon from '@hugeicons-pro/core-stroke-rounded/Add01Icon';
+import Logout01Icon from '@hugeicons-pro/core-stroke-rounded/Logout01Icon';
+import Link01Icon from '@hugeicons-pro/core-stroke-rounded/Link01Icon';
+import RoboticIcon from '@hugeicons-pro/core-stroke-rounded/RoboticIcon';
+import Menu01Icon from '@hugeicons-pro/core-stroke-rounded/Menu01Icon';
+import FilterHorizontalIcon from '@hugeicons-pro/core-stroke-rounded/FilterHorizontalIcon';
+import Sun03Icon from '@hugeicons-pro/core-stroke-rounded/Sun03Icon';
+const icons = {search:Search01Icon,calendar:Calendar03Icon,arrowLeft:ArrowLeft01Icon,arrowRight:ArrowRight01Icon,arrowUpRight:ArrowUpRight01Icon,bookmark:Bookmark02Icon,share:Share08Icon,home:Home01Icon,grid:GridViewIcon,settings:Settings01Icon,close:Cancel01Icon,check:Tick02Icon,plus:Add01Icon,logout:Logout01Icon,link:Link01Icon,robot:RoboticIcon,menu:Menu01Icon,filter:FilterHorizontalIcon,sun:Sun03Icon};
+export type IconName = keyof typeof icons;
+export function Icon({name,size=22,className,strokeWidth=1.7}:{name:IconName;size?:number;className?:string;strokeWidth?:number}){return <HugeiconsIcon icon={icons[name]} size={size} strokeWidth={strokeWidth} className={className} aria-hidden="true"/>}

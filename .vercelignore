@@ -1,0 +1,12 @@
+.env*
+.secrets
+.mongodb
+.git
+node_modules
+.next
+test-results
+playwright-report
+tests
+DESIGN.md
+
+output
