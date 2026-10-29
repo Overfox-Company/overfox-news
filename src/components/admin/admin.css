@@ -1,1 +1,83 @@
-.admin-shell,.login-shell{font-family:var(--font-outfit),sans-serif;color:#f5f5f0;background:#111210;min-height:100dvh}.admin-shell{padding:0 5vw}.admin-header{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:27px 0;border-bottom:1px solid #ffffff16}.admin-brand{display:flex;gap:12px;align-items:center;font-size:24px;font-weight:600;letter-spacing:-1px}.admin-brand-news{font-weight:400;color:#b4b5a9}.admin-shell main{max-width:1200px;margin:56px auto}.admin-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}.admin-eyebrow{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#d6d8c8;margin:0 0 12px}.admin-heading h1{font-size:clamp(34px,5vw,54px);font-weight:500;letter-spacing:-2px;line-height:1.1;margin:0 0 12px}.admin-heading h1 span,.login-panel h1 span{color:#f3df50}.admin-muted{color:#96998d;font-size:14px;line-height:1.5}.admin-tabs{display:flex;align-items:center;gap:8px;border-bottom:1px solid #ffffff15;margin:38px 0 25px;padding-bottom:16px}.admin-tabs button,.admin-tabs>a{display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:30px;font-size:14px;color:#aaa}.admin-tabs button.active{background:#f3df50;color:#171815}.admin-tabs button span{font-size:11px;opacity:.7}.admin-tabs>a{margin-left:auto}.admin-message{border:1px solid #f3df5040;background:#f3df5010;padding:16px 20px;border-radius:16px;font-size:14px;margin-bottom:24px}.admin-news-row{display:grid;grid-template-columns:100px 1fr auto;gap:22px;align-items:center;padding:23px 0;border-bottom:1px solid #ffffff14}.admin-news-row>img{width:100px;height:83px;object-fit:cover;border-radius:16px;background:#252720}.admin-news-row h3{font-size:18px;font-weight:500;line-height:1.35;margin:0 0 8px;letter-spacing:-.3px}.admin-news-row .admin-eyebrow{color:#d4d6c3;font-size:10px;letter-spacing:1px;margin-bottom:6px}.admin-news-row .admin-eyebrow span{color:#8b8e82}.row-actions{display:flex;gap:6px}.editor-panel{background:#1c1e18;border:1px solid #ffffff14;border-radius:24px;padding:28px;margin:26px 0}.editor-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}.editor-title h2{font-size:26px;letter-spacing:-.7px}.editor-form{display:grid;grid-template-columns:1fr 1fr;gap:22px}.editor-form label,.login-panel label{display:flex;flex-direction:column;gap:9px;font-size:13px;color:#cdcfbf}.editor-form .full{grid-column:1/-1}.editor-form textarea{border:1px solid #ffffff22;background:#ffffff06;border-radius:16px;padding:14px;resize:vertical;outline:none;font-size:15px;color:#fff;line-height:1.65;width:100%}.editor-form textarea:focus{border-color:#f3df50}.editor-form small{color:#979b88;font-size:12px}.editor-form .admin-checkbox{flex-direction:row;align-items:center;gap:12px}.admin-checkbox input{accent-color:#f3df50;width:18px;height:18px}.editor-actions{display:flex;justify-content:flex-end;gap:12px;padding-top:6px}.admin-empty{padding:50px 20px;text-align:center;color:#9fa28e;display:flex;align-items:center;flex-direction:column;gap:15px}.admin-empty h2{font-size:23px;color:#e1e3d5}.agents-panel{display:grid;grid-template-columns:1fr 1fr;gap:24px}.agents-intro,.connections{border:1px solid #ffffff17;background:#1a1c17;border-radius:26px;padding:32px}.agents-symbol{background:#f3df50;color:#171815;display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:21px;margin-bottom:30px}.agents-intro h2{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:0 0 20px}.agents-intro>p:not(.admin-eyebrow){font-size:15px;line-height:1.7;color:#a6a996}.mcp-endpoint{background:#10110e;padding:18px;border-radius:15px;margin:24px 0;overflow:auto}.mcp-endpoint span{display:block;color:#8d927d;font-size:11px;margin-bottom:7px}.mcp-endpoint code{font-size:12px;color:#f3df50}.agents-intro .agents-help{font-size:13px!important}.connections h3{font-size:18px}.connections h3 span{color:#8d927d}.connection-row{margin-top:25px;padding-top:20px;border-top:1px solid #ffffff15;display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}.connection-row .admin-muted{font-size:12px;margin-top:7px}.admin-footer{max-width:1200px;margin:auto;border-top:1px solid #ffffff13;padding:30px 0;color:#74796a;font-size:12px}.login-shell{display:flex;flex-direction:column;align-items:center;padding:36px 24px;background:radial-gradient(ellipse at 50% 5%,#35372235,transparent 65%),#111210}.admin-back{align-self:flex-start;display:flex;gap:10px;align-items:center;color:#b0b3a2;font-size:13px}.login-panel{width:100%;max-width:420px;margin:58px 0}.login-panel>img{margin-bottom:30px}.login-panel h1{font-size:50px;line-height:1.08;font-weight:500;letter-spacing:-2px;margin:18px 0}.login-panel>.admin-muted{font-size:16px;margin:22px 0 32px}.login-panel form{display:flex;flex-direction:column;gap:22px}.login-note{font-size:12px;color:#92987f;margin-top:27px;display:flex;align-items:center;gap:9px}.status-dot{width:6px;height:6px;border-radius:100%;background:#f3df50}.login-footer{font-size:11px;color:#737867;margin-top:auto}.admin-error{color:#fca5a5;font-size:14px}.admin-shell input[type=date]{color-scheme:dark}@media(max-width:700px){.admin-shell{padding:0 20px}.admin-shell main{margin:34px auto}.admin-header{padding:22px 0}.admin-heading{align-items:flex-start;flex-direction:column}.admin-heading h1{letter-spacing:-1.4px}.admin-heading>.inline-flex{width:100%}.admin-tabs{margin:28px 0 12px;gap:2px;flex-wrap:wrap}.admin-tabs button{font-size:13px;padding:11px 13px}.admin-tabs>a{font-size:12px;padding:10px 0}.admin-news-row{grid-template-columns:75px 1fr;gap:14px;padding:22px 0}.admin-news-row>img{width:75px;height:75px}.admin-news-row h3{font-size:16px}.row-actions{grid-column:2}.editor-panel{padding:20px 16px;margin-inline:-6px;border-radius:20px}.editor-form{grid-template-columns:1fr;gap:20px}.editor-form .full{grid-column:auto}.agents-panel{grid-template-columns:1fr}.agents-intro,.connections{padding:25px}.login-panel{margin:50px 0}.login-panel h1{font-size:46px}}
+.admin-shell,.login-shell { font-family:var(--preview-font); color:var(--foreground); background:var(--background); min-height:100dvh}
+.admin-shell { padding:0 5vw}
+.admin-header { max-width:1200px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:27px 0; border-bottom:1px solid var(--hairline-soft)}
+.admin-brand { display:flex; gap:12px; align-items:center; font-size:24px; font-weight:600; letter-spacing:-1px}
+.admin-brand-news { font-weight:400; color:var(--muted-foreground)}
+.admin-shell main { max-width:1200px; margin:56px auto}
+.admin-heading { display:flex; align-items:center; justify-content:space-between; gap:24px}
+.admin-eyebrow { font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--muted-foreground); margin:0 0 12px}
+.admin-heading h1 { font-size:clamp(34px,5vw,54px); font-weight: 700; letter-spacing: var(--heading-tracking); line-height:1.1; margin:0 0 12px}
+.admin-heading h1 span,.login-panel h1 span { color:var(--inverse-canvas)}
+.admin-muted { color:var(--muted-foreground); font-size:14px; line-height:1.5}
+.admin-tabs { display:flex; align-items:center; gap:8px; border-bottom:1px solid var(--hairline-soft); margin:38px 0 25px; padding-bottom:16px}
+.admin-tabs button,.admin-tabs>a { display:flex; align-items:center; gap:9px; padding:8px 16px; border:1px solid transparent; border-radius: var(--button-radius); font-size:14px; color:var(--muted-foreground)}
+.admin-tabs button.active { background:var(--secondary); color:var(--foreground); border-color:var(--border); font-weight:700}
+.admin-tabs button span { font-size:11px; opacity:.7}
+.admin-tabs>a { margin-left:auto}
+.admin-message { border:1px solid color-mix(in srgb, var(--info), transparent 65%); background:color-mix(in srgb, var(--info), transparent 92%); padding:16px 20px; border-radius: var(--card-radius); font-size:14px; margin-bottom:24px}
+.admin-news-row { display:grid; grid-template-columns:100px 1fr auto; gap:22px; align-items:center; padding:23px 0; border-bottom:1px solid var(--hairline-soft)}
+.admin-news-row>img { width:100px; height:83px; object-fit:cover; border-radius: var(--card-radius); background:var(--secondary)}
+.admin-news-row h3 { font-size:18px; font-weight: 700; line-height:1.35; margin:0 0 8px; letter-spacing: var(--heading-tracking)}
+.admin-news-row .admin-eyebrow { color:var(--muted-foreground); font-size:10px; letter-spacing:1px; margin-bottom:6px}
+.admin-news-row .admin-eyebrow span { color:var(--muted-foreground)}
+.row-actions { display:flex; gap:6px}
+.editor-panel { background:var(--card); border:1px solid var(--hairline-soft); border-radius: var(--card-radius); padding:28px; margin:26px 0}
+.editor-title { display:flex; align-items:center; justify-content:space-between; margin-bottom:24px}
+.editor-title h2 { font-size:26px; letter-spacing: var(--heading-tracking)}
+.editor-form { display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.editor-form label,.login-panel label { display:flex; flex-direction:column; gap:9px; font-size:13px; color:var(--muted-foreground)}
+.editor-form .full { grid-column:1/-1}
+.editor-form textarea { border:1px solid var(--input-border); background:var(--input-bg); border-radius: var(--input-radius); padding:14px; resize:vertical; outline:none; font-size:15px; color:var(--foreground); line-height:1.65; width:100%}
+.editor-form textarea:focus { border-color:var(--ring); box-shadow:var(--input-focus-shadow)}
+.editor-form small { color:var(--muted-foreground); font-size:12px}
+.editor-form .admin-checkbox { flex-direction:row; align-items:center; gap:12px}
+.admin-checkbox input { accent-color:var(--inverse-canvas); width:18px; height:18px}
+.editor-actions { display:flex; justify-content:flex-end; gap:12px; padding-top:6px}
+.admin-empty { padding:50px 20px; text-align:center; color:var(--muted-foreground); display:flex; align-items:center; flex-direction:column; gap:15px}
+.admin-empty h2 { font-size:23px; color:var(--foreground)}
+.agents-panel { display:grid; grid-template-columns:1fr 1fr; gap:24px}
+.agents-intro,.connections { border:1px solid var(--border); background:var(--card); border-radius: var(--card-radius); padding:32px}
+.agents-symbol { background:var(--secondary); color:var(--foreground); display:flex; align-items:center; justify-content:center; width:64px; height:64px; border-radius: var(--card-radius); margin-bottom:30px}
+.agents-intro h2 { font-size:34px; line-height:1.15; letter-spacing: var(--heading-tracking); margin:0 0 20px}
+.agents-intro>p:not(.admin-eyebrow) { font-size:15px; line-height:1.7; color:var(--muted-foreground)}
+.mcp-endpoint { background:var(--background); padding:18px; border-radius: var(--card-radius); margin:24px 0; overflow:auto}
+.mcp-endpoint span { display:block; color:var(--muted-foreground); font-size:11px; margin-bottom:7px}
+.mcp-endpoint code { font-family:var(--mono-font); font-size:12px; color:var(--info)}
+.agents-intro .agents-help { font-size:13px!important}
+.connections h3 { font-size:18px}
+.connections h3 span { color:var(--muted-foreground)}
+.connection-row { margin-top:25px; padding-top:20px; border-top:1px solid var(--hairline-soft); display:flex; align-items:flex-start; gap:12px; flex-wrap:wrap}
+.connection-row .admin-muted { font-size:12px; margin-top:7px}
+.admin-footer { max-width:1200px; margin:auto; border-top:1px solid var(--hairline-soft); padding:30px 0; color:var(--muted-foreground); font-size:12px}
+.login-shell { display:flex; flex-direction:column; align-items:center; padding:36px 24px; background:var(--background)}
+.admin-back { align-self:flex-start; display:flex; gap:10px; align-items:center; color:var(--muted-foreground); font-size:13px}
+.login-panel { width:100%; max-width:420px; margin:58px 0}
+.login-panel>img { margin-bottom:30px}
+.login-panel h1 { font-size:50px; line-height:1.08; font-weight: 700; letter-spacing: var(--heading-tracking); margin:18px 0}
+.login-panel>.admin-muted { font-size:16px; margin:22px 0 32px}
+.login-panel form { display:flex; flex-direction:column; gap:22px}
+.login-note { font-size:12px; color:var(--muted-foreground); margin-top:27px; display:flex; align-items:center; gap:9px}
+.login-footer { font-size:11px; color:var(--muted-foreground); margin-top:auto}
+.admin-error { color:color-mix(in srgb, var(--destructive), var(--foreground) 45%); font-size:14px}
+.admin-shell input[type=date] { color-scheme:dark}
+@media(max-width:700px) { .admin-shell { padding:0 20px}
+.admin-shell main { margin:34px auto}
+.admin-header { padding:22px 0}
+.admin-heading { align-items:flex-start; flex-direction:column}
+.admin-heading h1 { letter-spacing: var(--heading-tracking)}
+.admin-heading>.inline-flex { width:100%}
+.admin-tabs { margin:28px 0 12px; gap:2px; flex-wrap:wrap}
+.admin-tabs button { font-size:13px; padding:11px 13px}
+.admin-tabs>a { font-size:12px; padding:10px 0}
+.admin-news-row { grid-template-columns:75px 1fr; gap:14px; padding:22px 0}
+.admin-news-row>img { width:75px; height:75px}
+.admin-news-row h3 { font-size:16px}
+.row-actions { grid-column:2}
+.editor-panel { padding:20px 16px; margin-inline:-6px; border-radius: var(--card-radius)}
+.editor-form { grid-template-columns:1fr; gap:20px}
+.editor-form .full { grid-column:auto}
+.agents-panel { grid-template-columns:1fr}
+.agents-intro,.connections { padding:25px}
+.login-panel { margin:50px 0}
+.login-panel h1 { font-size:46px}
+}

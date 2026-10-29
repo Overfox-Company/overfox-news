@@ -2,7 +2,9 @@
 
 Periódico tecnológico de Overfox, diseñado primero para móvil. La lectura es pública; la publicación y edición requieren una sesión de administrador o una conexión MCP autorizada desde el panel.
 
-El proyecto usa Next.js App Router, TypeScript, Turbopack, componentes shadcn/ui, Tailwind CSS, Hugeicons Pro y MongoDB. Outfit se sirve desde `public/fonts/outfit/`, copiada del proyecto CAS. Las imágenes de noticias se muestran desde direcciones externas: no se suben ni se almacenan en este servidor.
+El proyecto usa Next.js App Router, TypeScript, Turbopack, componentes shadcn/ui, Tailwind CSS, Hugeicons Pro y MongoDB. DM Sans y JetBrains Mono se sirven localmente desde `public/fonts/`, con sus licencias OFL. Las imágenes de noticias se muestran desde direcciones externas: no se suben ni se almacenan en este servidor.
+
+Los tokens resueltos de [`DESIGN.md`](./DESIGN.md) definen la paleta, tipografía y geometría. Se centralizan en `src/app/globals.css` y se comparten con los componentes de UI y administración: fondo negro, superficies grises frías, texto blanco, azul para enlaces y foco, y colores semánticos para estados. Los campos conservan texto blanco y foco azul sobre negro para mantener el contraste.
 
 ## Funciones
 

@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
+import { categoryStyle } from "@/lib/category-colors";
 import { Icon } from "@/components/icon";
 
 export function SearchFilters({ query, category, date, categories }: { query: string; category: string; date: string; categories: string[] }) {
@@ -19,7 +20,7 @@ export function SearchFilters({ query, category, date, categories }: { query: st
         {calendarOpen && <div className="date-panel" id="date-panel"><label htmlFor="filter-date">Elige una fecha</label><input ref={dateRef} id="filter-date" type="date" value={date} onChange={(event) => { navigate({ date: event.target.value }); setCalendarOpen(false); }} /><button type="button" onClick={() => { navigate({ date: "" }); setCalendarOpen(false); }}>Ver todas las fechas</button></div>}
       </div>
     </div>
-    <div className="category-row" aria-label="Categorías"><button type="button" className={`category-pill${!category ? " selected" : ""}`} onClick={() => navigate({ category: "" })}><Icon name="grid" size={16} />Todo el radar</button>{categories.map((item) => <button key={item} type="button" className={`category-pill${category === item ? " selected" : ""}`} onClick={() => navigate({ category: item })}>{item}</button>)}</div>
+    <div className="category-row" aria-label="Categorías"><button type="button" className={`category-pill${!category ? " selected" : ""}`} aria-pressed={!category} onClick={() => navigate({ category: "" })}><Icon name="grid" size={16} />Todo el radar</button>{categories.map((item) => <button key={item} type="button" className={`category-pill${category === item ? " selected" : ""}`} style={categoryStyle(item)} aria-pressed={category === item} onClick={() => navigate({ category: item })}>{item}</button>)}</div>
     {(query || category || date) && <div className="active-filters"><span>Filtrando{query ? ` por “${query}”` : " noticias"}{category ? ` · ${category}` : ""}{date ? ` · ${date}` : ""}</span><button onClick={() => { setSearch(""); navigate({ q: "", category: "", date: "" }); }}>Limpiar filtros <Icon name="close" size={13} /></button></div>}
     {pending && <span className="sr-only" role="status">Buscando noticias…</span>}
   </section>;

@@ -1,0 +1,20 @@
+{
+  "name": "overfox-news-local",
+  "interface": {
+    "displayName": "Overfox News"
+  },
+  "plugins": [
+    {
+      "name": "overfox-news",
+      "source": {
+        "source": "local",
+        "path": "./plugins/overfox-news"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "overfox-news",
+  "version": "1.0.0",
+  "description": "Consulta, publica y actualiza noticias del radar tecnológico de Overfox mediante una conexión OAuth autorizada.",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Overfox News",
+    "shortDescription": "Noticias y publicación editorial de Overfox"
+  }
+}

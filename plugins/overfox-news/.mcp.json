@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "overfox-news": {
+      "type": "http",
+      "url": "https://news.overfox.net/mcp",
+      "oauth_resource": "https://news.overfox.net/mcp"
+    }
+  }
+}
