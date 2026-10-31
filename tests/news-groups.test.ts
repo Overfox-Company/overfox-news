@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { groupNewsByDay } from "../src/lib/news-groups";
+import { groupNewsByDay, newsDayRanges } from "../src/lib/news-groups";
 import type { NewsArticle } from "../src/lib/types";
 
 const article = (id: string, publishedAt: string) => ({ id, publishedAt }) as NewsArticle;
@@ -31,4 +31,13 @@ test("empty groups remain available in the requested order", () => {
   assert.deepEqual(groupNewsByDay([]).map(({ title, articles }) => [title, articles.length]), [
     ["Hoy", 0], ["Ayer", 0], ["Otras noticias", 0],
   ]);
+});
+
+test("feed queries cover complete Caracas days across month and year boundaries", () => {
+  const ranges = newsDayRanges(new Date("2027-01-01T02:00:00Z"));
+  assert.equal(ranges.today.$gte.toISOString(), "2026-12-31T04:00:00.000Z");
+  assert.equal(ranges.today.$lt.toISOString(), "2027-01-01T04:00:00.000Z");
+  assert.equal(ranges.yesterday.$gte.toISOString(), "2026-12-30T04:00:00.000Z");
+  assert.equal(ranges.yesterday.$lt.toISOString(), ranges.today.$gte.toISOString());
+  assert.deepEqual(ranges.other.$not, { $gte: ranges.yesterday.$gte, $lt: ranges.today.$lt });
 });

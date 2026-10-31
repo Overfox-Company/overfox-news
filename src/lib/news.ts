@@ -2,6 +2,7 @@ import { Filter, MongoServerError, ObjectId, WithId } from "mongodb";
 import { getDb } from "./db";
 import { dateRange, NewsError, newsInputSchema, newsUpdateSchema, slugify } from "./news-schema";
 import type { NewsArticle, NewsFilters, NewsResult } from "./types";
+import { newsDayRanges } from "./news-groups";
 
 type NewsDocument = Omit<NewsArticle, "id" | "publishedAt" | "createdAt" | "updatedAt"> & { publishedAt: Date; createdAt: Date; updatedAt: Date };
 let indexPromise: Promise<unknown> | undefined;
@@ -55,6 +56,34 @@ export async function getNews(filters: NewsFilters = {}): Promise<NewsResult> {
     news.countDocuments(query),
   ]);
   return { articles: documents.map(serialize), total, page, pages: Math.ceil(total / limit) };
+}
+
+// Fetch each day before paginating the archive so busy days cannot hide history.
+export async function getNewsFeed(filters: NewsFilters = {}, now = new Date()) {
+  const limit = Math.max(1, Math.min(50, Math.floor(Number(filters.limit) || 12)));
+  const requestedPage = Math.max(1, Math.min(10000, Math.floor(Number(filters.page) || 1)));
+  const base = buildNewsFilter(filters);
+  const ranges = newsDayRanges(now);
+  const query = (publishedAt: Filter<NewsDocument>["publishedAt"]): Filter<NewsDocument> => ({ $and: [base, { publishedAt }] });
+  const news = await collection();
+  const sort = { publishedAt: -1, _id: -1 } as const;
+  const [today, yesterday, archiveTotal] = await Promise.all([
+    news.find(query(ranges.today)).sort(sort).toArray(),
+    news.find(query(ranges.yesterday)).sort(sort).toArray(),
+    news.countDocuments(query(ranges.other)),
+  ]);
+  const pages = Math.ceil(archiveTotal / limit);
+  const page = Math.min(requestedPage, Math.max(1, pages));
+  const archive = await news.find(query(ranges.other)).sort(sort).skip((page - 1) * limit).limit(limit).toArray();
+  return {
+    total: today.length + yesterday.length + archiveTotal,
+    page, pages,
+    groups: [
+      { id: "hoy", title: "Hoy", articles: today.map(serialize), total: today.length },
+      { id: "ayer", title: "Ayer", articles: yesterday.map(serialize), total: yesterday.length },
+      { id: "otras-noticias", title: "Otras noticias", articles: archive.map(serialize), total: archiveTotal },
+    ],
+  };
 }
 
 export async function getArticle(slug: string): Promise<NewsArticle | null> {

@@ -1,8 +1,15 @@
 import type { NewsArticle } from "./types";
+import { dateRange } from "./news-schema";
 
 const dayFormatter = new Intl.DateTimeFormat("en-CA", {
   timeZone: "America/Caracas", year: "numeric", month: "2-digit", day: "2-digit",
 });
+
+export function newsDayRanges(now = new Date()) {
+  const today = dateRange(dayFormatter.format(now));
+  const yesterday = { $gte: new Date(today.$gte.getTime() - 86_400_000), $lt: today.$gte };
+  return { today, yesterday, other: { $not: { $gte: yesterday.$gte, $lt: today.$lt } } };
+}
 
 export function groupNewsByDay(articles: NewsArticle[], now = new Date()) {
   const today = dayFormatter.format(now);

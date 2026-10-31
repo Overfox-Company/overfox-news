@@ -9,6 +9,7 @@ Los tokens resueltos de [`DESIGN.md`](./DESIGN.md) definen la paleta, tipografí
 ## Funciones
 
 - Portada, búsqueda por texto, categorías y calendario en la zona `America/Caracas`.
+- Las filas de hoy y ayer cargan todas sus noticias; solo el archivo de otras fechas se pagina, sin desplazar las filas diarias.
 - Noticia con título, resumen, contenido, imagen, empresa, categoría, etiquetas, fecha y enlace a la fuente.
 - Página de detalle y guardados locales en el navegador, sin crear una cuenta.
 - Panel editorial en `/admin`: crear, editar, destacar y eliminar noticias; revisar y revocar agentes conectados.
@@ -161,6 +162,14 @@ npm run typecheck
 npm test
 npm run build
 ```
+
+Para ejecutar también la regresión del feed con MongoDB local:
+
+```bash
+NEWS_FEED_TEST_MONGODB_URI=mongodb://127.0.0.1:27017 npm test
+```
+
+Esta prueba usa una base temporal independiente y la elimina al terminar. Comprueba un día con más de 50 noticias, navegación del archivo y filtros.
 
 Las pruebas unitarias no requieren MongoDB. Para comprobar el flujo completo de login, consentimiento, PKCE, publicación, lectura pública, renovación y revocación, inicia el servidor local y ejecuta:
 
