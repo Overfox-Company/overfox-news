@@ -5,7 +5,7 @@ import { getDb } from "@/lib/db";
 
 const scrypt = promisify(scryptCallback);
 export const SESSION_COOKIE = "overfox_admin";
-const SESSION_SECONDS = 60 * 60 * 12;
+const SESSION_SECONDS = 60 * 60 * 24 * 90;
 export class AuthError extends Error {
   constructor(message = "Inicia sesión para continuar.", public status = 401) { super(message); }
 }

@@ -69,6 +69,8 @@ Abre `http://localhost:3001`. Para usar el puerto 3000, cambia también `APP_URL
 
 El acceso inicial de esta instalación está en `.secrets/admin-access.txt`, un archivo privado ignorado por Git. No lo publiques ni lo adjuntes a incidencias. Entra desde `/admin/login`; los lectores no necesitan iniciar sesión.
 
+Las sesiones del panel administrativo duran 90 días (3 meses) desde el inicio de sesión, sin extenderse por actividad. El plazo se aplica a los nuevos inicios de sesión; las sesiones existentes conservan su vencimiento original.
+
 Para crear o cambiar la contraseña, ejecuta en una terminal interactiva:
 
 ```bash
